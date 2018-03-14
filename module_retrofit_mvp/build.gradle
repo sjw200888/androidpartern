@@ -1,14 +1,45 @@
-apply plugin: 'com.android.application'
+//isModule本身不是boolean型，改成boolean区分判断
+if (isModule.toBoolean()){
+    apply plugin: 'com.android.application'
+}else {
+    apply plugin: 'com.android.library'
+    //butterknife
+    apply plugin: 'com.jakewharton.butterknife'
 
+}
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
+
+
+
     defaultConfig {
-        applicationId "com.sjw.wjs"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+//application和manifest文件区分
+    sourceSets {
+        main {
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+
+            } else {
+
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                //集成开发模式下排除debug文件夹中的所有Java文件
+                java {
+                    exclude 'debug/**'
+                }
+            }
+
+        }
+
+
+
     }
     buildTypes {
         release {
@@ -37,15 +68,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     //路由
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
-    //这里也要判断一下
-    if (isModule.toBoolean()){
-
-        implementation project(':lib_common')
-    }else
-    {
-        implementation project(':lib_common')
-        implementation project(':module_test')
-        implementation project(':module_retrofit_mvp')
-    }
-
+    //butterknife
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation project(':lib_common')
 }
