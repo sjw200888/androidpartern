@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/androidpartern.iml" filepath="$PROJECT_DIR$/androidpartern.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_common/lib_common.iml" filepath="$PROJECT_DIR$/lib_common/lib_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_custom/lib_custom.iml" filepath="$PROJECT_DIR$/lib_custom/lib_custom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_login_mvp/module_login_mvp.iml" filepath="$PROJECT_DIR$/module_login_mvp/module_login_mvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_retrofit_mvp/module_retrofit_mvp.iml" filepath="$PROJECT_DIR$/module_retrofit_mvp/module_retrofit_mvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_test/module_test.iml" filepath="$PROJECT_DIR$/module_test/module_test.iml" />
     </modules>

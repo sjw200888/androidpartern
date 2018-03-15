@@ -18,12 +18,14 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn_test;
     private Button sendvalue;
+    private Button mvplogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
          btn_test=(Button) findViewById(R.id.test);
         sendvalue=(Button) findViewById(R.id.sendvalue);
+        mvplogin=(Button) findViewById(R.id.mvplogin);
         btn_test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
 //进行跳转
                 ARouter.getInstance().build("/test/testActivity").navigation();
 
+            }
+        });
+
+
+        mvplogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //进行跳转
+                ARouter.getInstance().build("/mvplogin/mvploginActivity").navigation();
             }
         });
         //初始化eventbus

@@ -10,6 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib_common" />
+            <option value="$PROJECT_DIR$/lib_custom" />
+            <option value="$PROJECT_DIR$/module_login_mvp" />
             <option value="$PROJECT_DIR$/module_retrofit_mvp" />
             <option value="$PROJECT_DIR$/module_test" />
           </set>

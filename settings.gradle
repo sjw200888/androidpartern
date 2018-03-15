@@ -1,1 +1,1 @@
-include ':app', ':lib_common', ':module_test', ':module_retrofit_mvp'
+include ':app', ':lib_common', ':module_test', ':module_retrofit_mvp', ':module_login_mvp', ':lib_custom'

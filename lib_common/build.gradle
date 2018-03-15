@@ -40,6 +40,10 @@ dependencies {
     api 'com.squareup.retrofit2:converter-gson:2.1.0'
     //retrofit 拦截器 便于打印url
     api 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    //permission
+    api 'com.yanzhenjie:permission:2.0.0-rc3'
+    //自定义的Dialog
+    api 'com.yanzhenjie.alertdialog:alertdialog:1.0.1'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

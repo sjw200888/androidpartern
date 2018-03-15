@@ -24,6 +24,9 @@ public interface RetrofitApi {
     Call<ResponseBody>   getInfo(@QueryMap Map<String, String> map);
 
 
+    @GET("broadcast/")
+    Call<ResponseBody>   login(@QueryMap Map<String, String> map);
+
 
 
 }
